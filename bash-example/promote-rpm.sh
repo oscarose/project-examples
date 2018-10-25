@@ -12,7 +12,7 @@ fi
 
 srcPath="$1"
 targetPath="$2"
-artifactoryUser="admin"
+artifactoryUser="abraham"
 artifactoryPassword="password"
 
 if [ "$srcPath" == "dev" ]; then
@@ -23,13 +23,13 @@ fi
 
 rpmFolder="rpms-local/$targetPath/i586/artifactory"
 echo "INFO: Deleting old rpm content in $rpmFolder" && \
-curl -X DELETE -u $artifactoryUser:$artifactoryPassword "http://localhost:8081/artifactory/$rpmFolder" && \
+curl -X DELETE -u $artifactoryUser:$artifactoryPassword "http://52.2.245.82:8081/artifactory/$rpmFolder" && \
 echo "INFO: Promoting RPM from $srcPath to $rpmFolder" && \
 curl -X POST -u $artifactoryUser:$artifactoryPassword \
  -H "Accept: application/vnd.org.jfrog.artifactory.storage.CopyOrMoveResult+json" \
- "http://localhost:8081/artifactory/api/copy/$srcPath?to=/$rpmFolder&suppressLayouts=1" && \
+ "http://52.2.245.82:8081/artifactory/api/copy/$srcPath?to=/$rpmFolder&suppressLayouts=1" && \
 echo "INFO: Activating YUM recalculation" && \
 curl -X POST -u $artifactoryUser:$artifactoryPassword \
- "http://localhost:8081/artifactory/api/yum/rpms-local?async=0"
+ "http://52.2.245.82:8081/artifactory/api/yum/rpms-local?async=0"
 
 
