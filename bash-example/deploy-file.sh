@@ -12,7 +12,7 @@ fi
 
 localFilePath="$1"
 targetFolder="$2"
-artifactoryUser="admin"
+artifactoryUser="abraham"
 artifactoryPassword="password"
 
 if [ ! -f "$localFilePath" ]; then
