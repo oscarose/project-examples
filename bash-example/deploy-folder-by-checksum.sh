@@ -2,10 +2,10 @@
 
 # Recursively deploys folder content. Attempt checksum deploy first to optimize upload time.
 
-repo_url="http://localhost:8081/artifactory"
-tgt_repo="test"
+repo_url="http://52.2.245.82:8081/artifactory"
+tgt_repo="CB-MY-TEST"
 user=admin
-pass=password
+pass=oscarose84
 
 dir="$1"
 
