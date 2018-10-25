@@ -13,7 +13,7 @@ fi
 localFilePath="$1"
 targetFolder="$2"
 artifactoryUser="admin"
-artifactoryPassword="oscarose84"
+artifactoryPassword="password"
 
 if [ ! -f "$localFilePath" ]; then
     echo "ERROR: local file $localFilePath does not exists!"
