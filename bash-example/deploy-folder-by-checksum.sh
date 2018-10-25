@@ -5,7 +5,7 @@
 repo_url="http://52.2.245.82:8081/artifactory"
 tgt_repo="CB-MY-TEST"
 user=admin
-pass=oscarose84
+pass=password
 
 dir="$1"
 
