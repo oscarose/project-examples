@@ -15,7 +15,7 @@ fi
 buildName="$1"
 buildNumber="$2"
 targetRepo="$3"
-artifactoryUser="admin"
+artifactoryUser="abraham"
 artifactoryPassword="password"
 
 jsonFile=/tmp/promote-build-$buildName-$buildNumber.json
